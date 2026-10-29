@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  shutdown: graceful
+
+spring:
+  application:
+    name: hisab
+  profiles:
+    active: prod
+  web:
+    resources:
+      add-mappings: true
+      cache:
+        period: 0
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+
+logging:
+  level:
+    root: INFO
+    com.hisab: INFO
